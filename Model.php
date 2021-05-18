@@ -61,6 +61,33 @@
             return $data;
         }
 
+        // delete function 
+
+        public function delete($id){
+            // echo $id;
+            $query = "DELETE FROM article where id ='$id'";
+
+            if($sql = $this->conn->query($query)){
+                 return true;
+            }else{
+                return false;
+            }
+        }
+
+        // fetch single article 
+
+        public function fetch_single($id){
+            $data = null;
+            $query = "SELECT * FROM article where id = '$id' ";
+
+            if($sql = $this->conn->query($query)){
+                while ($row = $sql->fetch_assoc($sql)){
+                    $data = $row;
+                }
+            }
+            return $data;
+        }
+
     }
 
 
