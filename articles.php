@@ -48,9 +48,9 @@
                                 <td><?php echo $row['title'];?></td>
                                 <td><?php echo $row['text'];?></td>
                                 <td>
-                                    <a href="read.php ? id=<?php echo $row['id'] ?>" class="btn btn-success"> Read </a>
-                                    <a href="edit.php ? id=<?php echo $row['id'] ?>" class="btn btn-primary"> Edit </a>
-                                    <a href="delete.php ? id=<?php echo $row['id'] ?>" class="btn btn-danger"> Delete </a>
+                                    <a href="read.php?id=<?php echo $row['id'];?>" class="btn btn-success"> Read </a>
+                                    <a href="edit.php?id=<?php echo $row['id'];?>" class="btn btn-primary"> Edit </a>
+                                    <a href="delete.php?id=<?php echo $row['id'];?>" class="btn btn-danger"> Delete </a>
                                 </td>
                             </tr>
                         <?php

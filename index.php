@@ -25,6 +25,7 @@
         include 'Model.php';
         $model =new Model();
         $insert =$model->insert();
+
     ?>
 
                 <form action="" method="POST">

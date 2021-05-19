@@ -44,10 +44,7 @@
             }
         }
 
-
-
         // fetch articles
-
         public function fetch(){
             $data = null;
 
@@ -62,7 +59,6 @@
         }
 
         // delete function 
-
         public function delete($id){
             // echo $id;
             $query = "DELETE FROM article where id ='$id'";
@@ -75,17 +71,40 @@
         }
 
         // fetch single article 
-
         public function fetch_single($id){
             $data = null;
-            $query = "SELECT * FROM article where id = '$id' ";
+            $query = "SELECT * FROM article where id = '$id'";
 
             if($sql = $this->conn->query($query)){
-                while ($row = $sql->fetch_assoc($sql)){
+                while ($row = $sql->fetch_assoc()){
                     $data = $row;
                 }
             }
             return $data;
+        }
+
+        // edit an article 
+        public function edit($id){
+            // echo $id;
+            $data = null;
+            $query = "SELECT * FROM article where id = '$id'";
+
+            if($sql = $this->conn->query($query)){
+                while ($row = $sql->fetch_assoc()){
+                    $data = $row;
+                }
+            }
+            return $data;
+        }
+
+        public function update($data){
+            // var_dump($data);
+            $query ="UPDATE article SET auteur='$data[auteur]', title='$data[title]', text='$data[text]' WHERE id ='$data[id]'"; 
+            if($sql = $this->conn->query($query)){
+                return true;
+            }else{
+                return false;
+            }
         }
 
     }
