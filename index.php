@@ -14,7 +14,7 @@
   <div class="container">
         <div class="row">
             <div class="col-md-12 mt-5">
-                <h1 class="email-center"> Jadwa's blog </h1>
+                <h1 class="email-center"> Add a new article </h1>
                 <hr style="height: 1px; color: black; background-color: black;">
             </div>
         </div>
@@ -42,7 +42,7 @@
                         <input type="text" name="text" class="form-control">
                     </div>
                     <div class="form-group">
-                        <button type="submit" name="submit" class="btn btn-primary"></button>
+                        <input type="submit" name="submit" class="btn btn-primary mt-1" value="    Add    "></input>
                     </div>
                 </form>
             </div>

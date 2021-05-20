@@ -15,6 +15,7 @@
             }
         }
 
+    
 
         public function insert(){
             if(isset($_POST['submit'])){
@@ -31,14 +32,14 @@
 
                         if ($sql = $this->conn ->query($query)){
                             echo "<script> alert('article added successfully') </script>";
-                            echo "<script> window.location.href = 'index.php';</script>";
+                            echo "<script> window.location.href = 'articles.php';</script>";
                         }else{
                             echo "<script> alert('empty') </script>";
-                            echo "<script> window.location.href = 'index.php';</script>";
+                            echo "<script> window.location.href = 'articles.php';</script>";
                         }
                     }else{
                         echo "<script> alert('empty') </script>";
-                        echo "<script> window.location.href = 'index.php';</script>";
+                        echo "<script> window.location.href = 'articles.php';</script>";
                     }
                 }
             }
@@ -106,6 +107,7 @@
                 return false;
             }
         }
+
 
     }
 

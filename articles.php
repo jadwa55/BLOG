@@ -14,10 +14,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 mt-5">
-                    <h1 class="">Dashboard</h1>
+                <h1 class="">Dashboard</h1>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <a href="index.php" class="btn btn-primary me-md-2" type="button">Add an article</a>
+                        <a href="login.php" class="btn btn-primary" type="button">Logout</a>
+                    </div>
                     <hr style="height: 1px; color: black; background-color: black;">
                 </div>
             </div>
+
             <div class="row">
                 <div class="col-md-12">
                     <table class="table">
@@ -49,7 +54,7 @@
                                 <td><?php echo $row['text'];?></td>
                                 <td>
                                     <a href="read.php?id=<?php echo $row['id'];?>" class="btn btn-success"> Read </a>
-                                    <a href="edit.php?id=<?php echo $row['id'];?>" class="btn btn-primary"> Edit </a>
+                                    <a href="edit.php?id=<?php echo $row['id'];?>" class="btn btn-info"> Edit </a>
                                     <a href="delete.php?id=<?php echo $row['id'];?>" class="btn btn-danger"> Delete </a>
                                 </td>
                             </tr>

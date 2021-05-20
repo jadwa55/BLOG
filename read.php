@@ -14,7 +14,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 mt-5">
-                    <h1 class="">article</h1>
+                    <p class="h1"><strong> Article </strong></p>
                     <hr style="height: 1px; color: black; background-color: black;">
                 </div>
             </div>
@@ -29,10 +29,10 @@
 
                     ?>
                     <div class="card">
-                        <div class="card-header">Single Article</div>
+                        <div class="card-header text-primary">Single Article</div>
                         <div class="card-body">
-                            <p><?php echo $row['title'];?></p>
-                            <p><?php echo $row['text'];?></p>
+                            <p><strong>Title: </strong><?php echo $row['title'];?></p>
+                            <p><strong>Content: </strong><?php echo $row['text'];?></p>
                         </div>
                     </div>
                     <?php 
@@ -40,6 +40,9 @@
                             echo "no data";
                         }
                     ?>
+                    <div class="">
+                        <a href="articles.php" class="btn btn-primary mt-1" type="button">Back</a>
+                    </div>
                 </div>
             </div>
         </div>

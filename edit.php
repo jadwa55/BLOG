@@ -71,7 +71,7 @@
                         <input type="text" name="text" value="<?php echo $row['text'];?>" class="form-control">
                     </div>
                     <div class="form-group">
-                        <button type="submit" name="update" class="btn btn-info mt-2 ">Save Changes</button>
+                        <button type="submit" name="update" class="btn btn-primary mt-2 ">Save Changes</button>
                         <!-- <input type="reset" class="btn btn-secondary" value="Cancel" /> -->
                     </div>
                 </form>
