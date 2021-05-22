@@ -14,9 +14,7 @@
                 echo"connection failed".$e->getMessage();
             }
         }
-
     
-
         public function insert(){
             if(isset($_POST['submit'])){
             //    echo "yes";
