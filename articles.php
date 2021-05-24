@@ -41,14 +41,14 @@
                             $model = new Model();
                             $rows  = $model->fetch();
                             // var_dump($rows);
-                            $i = 1;
+                            // $i = 1;
                             if (!empty($rows)){
                                 foreach($rows as $row){
 
 
                         ?>
                             <tr>
-                                <td><?php echo $i++;?></td>
+                                <td><?php echo $row['id'];?></td>
                                 <td><?php echo $row['auteur'];?></td>
                                 <td><?php echo $row['title'];?></td>
                                 <td><?php echo $row['text'];?></td>

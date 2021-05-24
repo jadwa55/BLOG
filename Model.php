@@ -7,13 +7,52 @@
         private $db = "oop_crud";
         private $conn;
 
+        
+        protected $con;
+        protected $sql;
+
+
         public function __construct(){
             try{
-                $this->conn=new mysqli($this->server,$this->username,$this->password,$this->db);
+                // $conn = new PDO("mysql:host=$this->server;dbname=$this->db", $this->username, $this->password);
+
+                //  $this->conn=new mysqli($this->server,$this->username,$this->password,$this->db);
+                return $this->conn=new mysqli($this->server,$this->username,$this->password,$this->db);
             } catch(Exception $e){
                 echo"connection failed".$e->getMessage();
             }
         }
+
+        public function sql(string $sql)
+    {
+        try {
+            // ! Test Query
+            $this->conn->query($sql);
+
+        } catch (PDOException $th) {
+            die( "SQL failed : {$sql}");
+        }
+
+        // * Save Query
+        $this->sql=$sql;
+
+        return $this;
+    }
+
+    public function get()
+    {
+        if($sql = $this->conn->query($this->sql)){
+            while ($row = ($sql->fetch_object())) {
+                $data[] = $row;
+            }
+        }
+        // ? Fetch Data
+        // $return = $this->conn->query($this->sql);
+        // return $return->fetch_object();
+        return $data;
+    }
+
+
     
         public function insert(){
             if(isset($_POST['submit'])){
